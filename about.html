@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REMR|||About</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/about.css">
+</head>
+<section>
+    <div class="clouds clouds1"></div>
+    <div class="clouds clouds2"></div>
+    <div class="clouds clouds3"></div>
+</section>
+
+<body>
+
+    <div class="grain">
+
+        <div class="container-all">
+            <!-- Barra de navegación -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container">
+                    <a class="navbar-brand title-head" href="#">Acerca de</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link subtitle-head" href="index.html">Inicio</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Textoooo -->
+            <div class="container mt-5 ">
+                <p class="card-text card_">Pasante de la carrera de Ingeniería en Informática en el Centro
+                    Universitario Tecnológico CEUTEC. Tengo experiencia en lenguajes de programación
+                    como Java, Python, Javascript, C++, dotNet C#, manejo de bases de datos como
+                    MySQL, SQL, NoSQL (básico), manejo de sistemas operativoscomo Kali, Parrot,
+                    Ubuntu, Fedora, y programas de análisis matemático como MatLab. También tengo
+                    experiencia en la edición de videos e imágenes y desarrollo de videojuegos en
+                    Unreal Engine 4/5.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function stars() {
+            const count = 200;
+            const section = document.querySelector('section');
+            var i = 0;
+
+            while (i < count) {
+                const star = document.createElement('i');
+                const x = Math.floor(Math.random() * window.innerWidth)
+                const y = Math.floor(Math.random() * window.innerHeight)
+                const size = Math.random() * 4;
+
+                star.style.left = x + 'px';
+                star.style.top = y + 'px';
+                star.style.width = 1 + size + 'px';
+                star.style.height = 1 + size + 'px';
+
+                const duration = Math.random() * 2;
+                star.style.animationDuration = 4 + duration + 's';
+                section.appendChild(star);
+
+                i++;
+            }
+
+        }
+        stars();
+        window.onload = function () {
+            var bodyElement = document.body;
+            bodyElement.classList.add("fade-in");
+        }
+    </script>
+    <!-- Pie de página -->
+    <footer class="bg-dark text-white text-center py-3 footer">
+        <div class="container">
+            <p>Derechos de autor &copy; 2023 | REMR</p>
+            <a class="footer-link" href="" target="_blank">GITHUB</a>
+            <a class="footer-link" href="" target="_blank">LINKEDIN</a>
+            <a class="footer-link" href="" target="_blank">GMAIL</a>
+        </div>
+    </footer>
+    </div>
+
+    </div>
+</body>
+
+
+</html>

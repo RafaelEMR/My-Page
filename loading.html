@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      opacity: 1;
+      transition: opacity 1s;
+    }
+
+    .fade-out {
+      opacity: 0;
+    }
+
+    #loading {
+      font-size: 24px;
+      text-align: center;
+    }
+    /* Animación de los puntos */
+    @keyframes loadingAnimation {
+      0% { content: "."; }
+      33% { content: ".."; }
+      66% { content: "..."; }
+      100% { content: ""; }
+    }
+
+    #loading::after {
+      content: "...";
+      animation: loadingAnimation 2s infinite; /* Duración de la animación de los puntos: 2 segundos */
+      animation-delay: 3s; /* Retraso de 3 segundos para los puntos */
+    }
+  </style>
+</head>
+<body>
+  <div id="loading">Loading...</div>
+
+  <script>
+    // Función para mostrar el texto de carga en diferentes idiomas
+    function showLoadingText() {
+      var loadingDiv = document.getElementById("loading");
+      var languages = {
+        "English": "Loading",
+        "Español": "Cargando",
+        "Русский": "Загрузка",
+        "日本語": "読み込み中",
+        "Deutsch": "Laden"
+      };
+
+      // Seleccionar un idioma aleatorio de los disponibles
+      var languageKeys = Object.keys(languages);
+      var randomLanguage = languageKeys[Math.floor(Math.random() * languageKeys.length)];
+
+      // Mostrar el texto de carga en el idioma seleccionado
+      loadingDiv.innerText = languages[randomLanguage] + "...";
+    }
+
+    // Cambiar el texto de carga cada 5 segundos
+    setInterval(function() {
+      showLoadingText();
+    }, 5000);
+
+    // Esperar 10 segundos y luego aplicar el efecto de fundido
+    setTimeout(function() {
+      var bodyElement = document.body;
+      bodyElement.classList.add("fade-out");
+
+      // Redirigir a la segunda página HTML después de que se complete el efecto de fundido
+      setTimeout(function() {
+        window.location.href = "about.html";
+      }, 1000); // Esperar 1 segundo (duración de la transición) antes de redirigir a la segunda página
+    }, 20000); // Esperar 10 segundos antes de aplicar el efecto de fundido
+  </script>
+</body>
+</html>
