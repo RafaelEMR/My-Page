@@ -113,7 +113,7 @@ body {
   position: absolute;
   width: 300px;
   height: 150px;
-  background-image: url('/pngwing.com.png');
+  background-image: url('pngwing.com.png');
   background-size: cover;
   filter: blur(10px);
   animation: cloud 15s linear infinite;
