@@ -1,0 +1,145 @@
+@font-face {
+  font-family: 'FOT-Matisse Pro EB';
+  src: url('/fonts/FOT-Matisse\ Pro\ EB.otf') format('truetype');
+}
+
+body {
+background-color: #000;
+font-family: 'FOT-Matisse Pro EB';
+margin: 0;
+padding: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh;
+}
+
+.container {
+position: sticky;
+top: 0;
+text-align: left;
+}
+
+.name {
+font-size: 50px;
+color: #EFEDFF;
+text-shadow: 0 0 5px #7A524F, 0 0 5px #977D71;
+margin: 0;
+line-height: 1;
+}
+
+.name-big {
+font-size: 100px;
+color: #EFEDFF;
+text-shadow: 0 0 5px #7A524F, 0 0 5px #977D71;
+margin: 0;
+line-height: 1;
+}
+
+.episode {
+font-size: 30px;
+font-family: Helvetica;
+color: #EFEDFF;
+text-shadow: 0 0 5px #7A524F, 0 0 5px #977D71;
+margin-top:60px;
+line-height: 1;
+margin-bottom: 0;
+}
+
+.job-title {
+font-size: 50px;
+font-family: Helvetica;
+color: #EFEDFF;
+text-shadow: 0 0 5px #7A524F, 0 0 5px #977D71;
+margin-top: 0;
+line-height: 1;
+margin-left: 180px;
+}
+
+.stretched {
+display: inline-block;
+transform: scaleY(1.5);
+transform-origin: 0 0;
+}
+.container > div {
+margin: 15px;
+}
+
+.job-title a {
+text-decoration: none;
+color: #EFEDFF;
+}
+.job-title a:hover{
+  color:#FFF;
+}
+
+/**/
+.container{
+  margin-top:100px;
+}
+footer {
+  padding: 20px 0;
+}
+
+
+.footer-links {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.footer-link {
+  font-family:helvetica;
+  font-size: 10px;
+  color: #EFEDFF;
+  text-shadow: 0 0 5px #7A524F, 0 0 5px #977D71;
+  text-decoration: none;
+  line-height: 1;
+  margin-right: 10px;
+}
+
+.footer-link:hover {
+  color: #FFF;
+}
+
+/*VHSSSSS*/
+
+
+
+.grain {
+  height: 100%h;
+  background-color: transparent;
+  position: relative;
+  z-index: 300;
+  pointer-events: none;
+}
+ 
+.grain:after {
+  animation: grain 8s steps(10) infinite;
+  background-image: url("https://assets.website-files.com/5dff182dc3faab4c98b08388/5dff21c5e65e0610a8d38b86_noisy-texture-100x100-o5-d10-c-FFFFFA-t1.png");
+  content: "";
+  height: 300%;
+  left: -50%;
+  position: fixed;
+  top: -100%;
+  width: 300%;
+}
+ 
+@keyframes grain {
+  0%, 100% {transform: translate(0,0);}
+  10% {transform: translate(-5%,-10%);}
+  30% {transform: translate(3%,-15%);}
+  50% {transform: translate(12%,9%);}
+  70% {transform: translate(9%,4%);}
+  90% {transform: translate(-1%,7%);}
+}
+
+.footer-link a {
+  pointer-events: auto;
+}
+.job-title a{
+  pointer-events: auto;
+}
+

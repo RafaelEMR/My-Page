@@ -1,0 +1,208 @@
+.title-head {
+  font-size: 50px;
+  font-family: Helvetica;
+  font-weight: bold;
+  color: #FFF !important;
+  text-shadow: 0 0 5px #FFF, 0 0 5px #7E8BA0;
+}
+
+.subtitle-head {
+  font-size: 20px;
+  font-family: Helvetica;
+  font-weight: bold;
+  color: #FFF !important;
+  text-shadow: 0 0 5px #FFF, 0 0 5px #7E8BA0;
+}
+
+p {
+  color: #FFF !important;
+  text-shadow: 0 0 5px #FFF, 0 0 5px #7E8BA0;
+}
+
+.card_ {
+  font-size: 20px;
+  font-family: Helvetica;
+  color: #FFF !important;
+  text-shadow: 0 0 5px #FFF, 0 0 5px #7E8BA0;
+}
+
+.nav-link:hover {
+  color: #FDE0F7 !important;
+}
+
+.navbar {
+  display: inline;
+  margin: 16px;
+  padding: 0;
+}
+
+body {
+  background: #61819D;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.grain {
+  height: 100%h;
+  pointer-events: none;
+  background-color: transparent;
+  position: relative;
+  z-index: 300;
+}
+
+.grain:after {
+  animation: grain 8s steps(10) infinite;
+  background-image: url("https://assets.website-files.com/5dff182dc3faab4c98b08388/5dff21c5e65e0610a8d38b86_noisy-texture-100x100-o5-d10-c-FFFFFA-t1.png");
+  content: "";
+  height: 300%;
+  left: -50%;
+  position: fixed;
+  top: -100%;
+  width: 300%;
+}
+
+@keyframes grain {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  10% {
+    transform: translate(-5%, -10%);
+  }
+
+  30% {
+    transform: translate(3%, -15%);
+  }
+
+  50% {
+    transform: translate(12%, 9%);
+  }
+
+  70% {
+    transform: translate(9%, 4%);
+  }
+
+  90% {
+    transform: translate(-1%, 7%);
+  }
+}
+
+.container-all a {
+  pointer-events: auto;
+}
+
+.footer {
+  background: #61819D !important;
+  margin-top: 400px;
+}
+
+.footer-link {
+  color: #FFF !important;
+  text-shadow: 0 0 5px #FFF, 0 0 5px #7E8BA0;
+}
+
+/**/
+
+.clouds {
+  position: absolute;
+  width: 300px;
+  height: 150px;
+  background-image: url('/pngwing.com.png');
+  background-size: cover;
+  filter: blur(10px);
+  animation: cloud 15s linear infinite;
+  z-index: -1;
+}
+
+.clouds1 {
+  top: 20%;
+  left: 10%;
+}
+
+.clouds2 {
+  top: 30%;
+  right: 15%;
+}
+
+.clouds3 {
+  bottom: 20%;
+  left: 25%;
+}
+
+@keyframes cloud {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  80% {
+    transform: translateX(20%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+}
+
+.image-container {
+  text-align: center;
+
+}
+
+.image-container img {
+  width: 200px;
+}
+
+.card-body {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card-transparent {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/**/
+section i {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #fff,
+    0 0 80px #fff;
+  animation: animate linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/**/
